@@ -1,0 +1,63 @@
+:root {
+    /* colors */
+    --clr-dark: #05231a;
+    --clr-grey: #cad2cf;
+    --clr-light: #fff;
+    --clr-highlight: #cad2cf;
+
+    --clr-pink: #ff2b63;
+    --clr-orange: #ff6918;
+    --clr-green: #00ffae;
+    --clr-cyan: #00e1ff;
+
+
+    --clr-red: #ff0863;
+    --clr-placeholder: #e3e3e3;
+    --clr-frame: #ff3300;
+
+    /* size */
+    --size-xxs: 0.06rem;
+    --size-xs: 0.25rem;
+    --size-s: 0.6rem;
+    --size-m: 1rem;
+    --size-l: 1.2rem;
+    --size-xl: 1.5rem;
+    --size-2xl: 2rem;
+    --size-3xl: 5rem;
+    --size-4xl: 10rem;
+
+
+    /* font weight */
+    --font-ultralight: 200;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-bold: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: calc(1em+0.75rem);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Switzer', sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}
+
+strong {
+    color: var(--clr-red);
+}

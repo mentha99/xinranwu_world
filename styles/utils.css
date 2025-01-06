@@ -1,0 +1,110 @@
+/* XL */
+/* @media (min-width: 1537px){} */
+
+/* L-default, do not use */
+/* @media (max-width: 1024px){} */
+
+/* M */
+/* @media (max-width: 800px){} */
+
+/* S */
+/* @media (max-width: 480px){} */
+
+:root {
+    --screen-phone: 480px;
+    --screen-pad: 1024px;
+    --screen-hires: 1537px;
+}
+
+
+/*---------- text styles ----------*/
+/* main text */
+p {
+    padding-top: var(--size-s);
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0em;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+}
+
+h2 {
+    font-size: 1.35rem;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 1.5rem;
+}
+
+.text_light {
+    color: var(--clr-light);
+}
+
+.text_oblique{
+    font-style: oblique;
+}
+
+.text_bold{
+    font-weight: 500;
+}
+
+/* title text */
+.title {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-decoration: none;
+    letter-spacing: -0.05em;
+    color: var(--clr-dark)
+}
+
+.btn {
+    font-style: normal;
+}
+
+.btn:hover {
+    font-style: oblique;
+}
+
+
+/*---------- screen size fit (laptop first) ----------*/
+.container {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--size-s);
+    padding-right: var(--size-s);
+    /* border: solid 1px var(--clr-frame); */
+}
+
+.section {
+    margin-top: 4rem;
+}
+
+/* XL */
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+
+/* M */
+@media (max-width: 800px) {
+    .container {
+        max-width: 480px;
+    }
+}
+
+/* S */
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .section {
+        margin-top: 2rem;
+    }
+}

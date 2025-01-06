@@ -1,0 +1,122 @@
+.header {
+    padding-top: var(--size-xs);
+    position: fixed;
+    align-content: center;
+    width: 100%;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.25s ease-out;
+}
+
+.header.scroll {
+    width: 33%;
+}
+
+/* M */
+@media (max-width: 800px) {
+    .header.scroll {
+        width: 100%;
+    }
+}
+
+.header__menu {
+    /* background-color: var(--clr-placeholder); */
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-content: center;
+    border-bottom: solid 0.08rem var(--clr-dark);
+}
+
+.subheader {
+    padding-top: var(--size-xs);
+    position: fixed;
+    align-content: center;
+    width: 100%;
+    z-index: 99;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.subheader.white {
+    background-color: white;
+}
+
+.subheader.appear {
+    visibility: visible;
+    opacity: 1;
+}
+
+.subheader.secondline {
+    padding-top: 1.65rem;
+}
+
+/* M */
+@media (max-width: 800px) {
+    .subheader {
+        padding-top: 1.65rem;
+    }
+}
+
+.subheader__menu {
+    /* background-color: var(--clr-placeholder); */
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.subheader__menu.column2 {
+    /* background-color: var(--clr-placeholder); */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style: none;
+    align-content: start;
+}
+
+.header__link {
+    font-size: var(--size-l);
+    text-decoration: none;
+    font-weight: var(--font-light);
+    color: var(--clr-dark);
+    letter-spacing: -0.025em;
+}
+
+.header__link:hover {
+    font-style: oblique;
+}
+
+.header__text {
+    grid-column: span 1;
+    font-size: var(--size-l);
+    text-decoration: none;
+    font-weight: var(--font-light);
+    color: var(--clr-dark);
+    letter-spacing: -0.025em;
+}
+
+/* Header Font Size */
+@media (max-width: 800px) {
+    .header__link {
+        font-size: var(--size-m);
+    }
+    .header__text {
+        font-size: var(--size-m);
+    }
+}
+
+
+/* XL */
+/* @media (min-width: 1537px){} */
+
+/* L-default, do not use */
+/* @media (max-width: 1024px){} */
+
+/* M */
+/* @media (max-width: 800px){} */
+
+/* S */
+/* @media (max-width: 480px){} */
