@@ -1,64 +1,3 @@
-/* ------- HERO ------- */
-.bg_black{
-    background-color: black;
-    z-index: 200;
-}
-
-
-
-
-
-/* ------- SHELF ------- */
-.window {
-    width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-}
-
-/* M */
-@media (max-width: 800px) {
-    .single_page {
-        scroll-snap-type: none;
-    }
-}
-
-.slide_page {
-    overflow-y: hidden;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    scroll-snap-align: start;
-    z-index: 0;
-    /* border: 1px pink; */
-}
-
-.slide_auto {
-    overflow-y: hidden;
-    width: 100%;
-    height: auto;
-    display: flex;
-    scroll-snap-align: start;
-    z-index: 0;
-    /* border: 1px pink; */
-    background-color: white;
-}
-
-.background {
-    /* position: fixed; */
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-}
-
-
-
-
-
-
-
-
 .index__grid {
     display: grid;
     /* gap: var(--size-3xl); */
@@ -185,14 +124,15 @@
     grid-column: 2/3;
     grid-row: 1/2;
     list-style: none;
-    padding-right: 4.5rem;
+    padding-right: 5rem;
     /* padding-top: 5rem; */
     /* margin-bottom: var(--size-s); */
     padding: var(--size-s) 0;
 }
 
 .index__work {
-    margin-bottom: var(--size-m);
+    margin-right: 5rem;
+    margin-bottom: var(--size-xl);
 }
 
 .index__work:hover {

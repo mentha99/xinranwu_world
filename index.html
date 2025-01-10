@@ -10,11 +10,16 @@
     <link
         href="https://api.fontshare.com/v2/css?f[]=switzer@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,900,901&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Padyakke+Expanded+One&display=swap"
+        rel="stylesheet">
 
     <!-- styles -->
     <link rel="stylesheet" href="/styles/modern-normalize.css">
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/conponents/index.css">
+    <link rel="stylesheet" href="/styles/conponents/hero&lab.css">
     <link rel="stylesheet" href="/styles/conponents/header.css">
     <link rel="stylesheet" href="/styles/conponents/footer.css">
     <!-- <link rel="stylesheet" href="/styles/conponents/project.css"> -->
@@ -24,168 +29,179 @@
 </head>
 
 <body>
-    <!-- * * * * * HEADER * * * * * -->
-    <header class="header container">
+    <header id="lab-header" class="header container">
         <nav>
-            <ul class="header__menu">
+            <ul class="header__menu noLine">
                 <li>
-                    <a class="header__text text_oblique">Xinran Wu</a>
+                    <a class="header__link text_oblique" href="../index.html">XINRAN WU</a>
                 </li>
                 <li>
-                    <a class="header__link" href="#lab">↑lab</a>
+                    <!-- <a class="header__link" href="../info/projects.html">index</a> -->
                 </li>
                 <li>
-                    <a class="header__link" href="./info/about.html">about</a>
+                    <a class="header__link" href="./info/projects.html">to all projects →</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <!-- <header class="subheader white appear secondline container"> -->
-    <header class="subheader appear secondline container">
-        <ul class="subheader__menu column2">
-            <a class="header__text mobilehide">THOUGHTS</a>
-            <a class="header__text mobilehide">WORKS</a>
-
-            <a class="header__link PChide" href="#works">WORKS</a>
-            <a class="header__link PChide right" href="#thoughts">THOUGHTS</a>
-        </ul>
-    </header>
-
     <!-- * * * * * FOOTER * * * * * -->
-     <footer id="footer-lab" class="footer container">
+    <footer id="footer-lab" class="footer container">
         <nav>
-            <a class="footer__text" href="#lab">to the lab<br>↓</a>
+            <a id="link-hero-lab" class="footer__text light link" href="#lab">to the lab<br>↓</a>
         </nav>
-     </footer>
-     <footer id="footer-index" class="footer container">
+    </footer>
+    <footer id="footer-lab" class="footer container">
         <nav>
-            <a class="footer__text" href="#index">to the index<br>↓</a>
+            <a id="link-lab-info" class="footer__text link light">show info</a>
         </nav>
-     </footer>
+    </footer>
 
-    <nav class="window">
+
+    <div id="window" class="window_scroll">
         <!-- * * * * * HERO * * * * * -->
-        <section id="hi" class="slide_page">
-            <img class="background" src="./images/Hero/explain_diagram_wText_postcard_noText_02.png" alt="">
-        </section>
-
-        <!-- * * * * * LAB * * * * * -->
-        <section class="slide_page">
-            <nav id="lab"></nav>
-            <img class="background" src="./images/Lab/shelf_temp.png" alt="">
-        </section>
-
-        <!-- * * * * * INDEX * * * * * -->
-        <section id="index" class="slide_auto container">
-            <div class="index__grid">
-                <!-- * * * * * WORKS * * * * * -->
-                <ul id="works" class="index__works">
-                    <div class="nav_box"></div>
-                    <li id="SitDown" class="index__work WIP">
-                        <a href="./project/SitDown.html">Sit Down, My Stranger (WIP)</a>
-                        <p>, VR Experience and Performance, United States & China, 2024.9-</p>
-                    </li>
-                    <li id="IntoBirth" class="index__work">
-                        <a href="./project/IntoBirth.html">Into Birth</a>
-                        <p>, Immersive Website, Beijing, China, United States, 2024.12</p>
-                    </li>
-                    <li id="PHS" class="index__work WIP">
-                        <a href="./project/PHS.html">PHS (WIP)</a>
-                        <p>, Music Video VFX, Sichuan, China, 2024.9-</p>
-                    </li>
-                    <li id="FalseWindows" class="index__work">
-                        <a href="./project/FalseWindows.html">False Windows</a>
-                        <p>, Animated Short Film, Shanghai, China, 2024.8</p>
-                    </li>
-                    <li id="CoupleOfSingles" class="index__work">
-                        <a href="./project/CoupleOfSingles.html">Couple of Singles</a>
-                        <p>, VR Experience, Shaanxi & Beijing, China, 2024.7-</p>
-                    </li>
-                    <li id="CoveredBridge" class="index__work">
-                        <a href="./project/CoveredBridge.html">Covered Bridge on Aqueduct</a>
-                        <p>, Architectural Renovation, Fengwu Village, Anhui, China, 2023</p>
-                    </li>
-                    <li id="TrilogyOfTrees" class="index__work">
-                        <a href="./project/TheVine.html">Trilogy of Trees</a>
-                        <p>, Photography and Installation, Beijing, China & Europe, 2022-2023</p>
-                    </li>
-                    <li id="NovelOfTriviality" class="index__work">
-                        <a href="./project/NovelOfTriviality.html">Novel of Triviality</a>
-                        <p>, Photography, Shanghai, China, 2021</p>
-                    </li>
-                    <li id="TheRiver" class="index__work">
-                        <a href="./project/TheRiver.html">The River</a>
-                        <p>, Architectural Proposal, Shanghai, China, 2021</p>
-                    </li>
-                    <li id="FoldingBeijing" class="index__work">
-                        <a href="./project/FoldingBeijing.html">Folding Beijing</a>
-                        <p>, Popular Science Book, Beijing, China, 2020-2021</p>
-                    </li>
-                    <li id="FloodedTeaHouse" class="index__work">
-                        <a href="./project/FloodedTeaHouse.html">Flooded Tea House</a>
-                        <p>, Architectural Proposal, Shandong, China, 2020</p>
-                    </li>
-                </ul>
-
-                <!-- * * * * * THOUGHTS * * * * * -->
-                <div id="thoughts" class="index__thoughts">
-                    <div class="nav_box"></div>
-                    <div class="index__thought">
-                        <p class="">
-                            I create research-based <span id="word_1">art</span> and <span id="word_2">design</span>
-                            projects, driven by an obsession with
-                            <span id="word_3">individual</span> and <span id="word_4">collective</span> memory which
-                            <span id="word_6">shaped</span> and <span id="word_7">shaping</span> during the <span
-                                id="word_5">modernization</span> process in
-                            <span id="word_8">contemporary China</span> and its <span id="word_9">connections to the
-                                world</span>.
-                        </p>
-                        <p class="indent">
-                            At a <span id="word_10">macro</span> scale, I am fascinated by how collective memory anchors
-                            itself in the shifting
-                            <span id="word_11">urban spaces</span> and <span id="word_12">rural landscapes</span>.
-                        </p>
-                        <p class="indent">
-                            At a <span id="word_13">micro</span> scale, I’m interested in how individual memory is <span
-                                id="word_14">formed</span>,
-                            <span id="word_15">transmitted</span>, and <span id="word_16">stored</span> through
-                            <span id="word_17">sensory process</span> and <span id="word_18">neural mechanisms</span>.
-                        </p>
-                    </div>
-                    <div class="gap_box"></div>
-                    <div class="index__thought">
-                        <p class="">
-                            I experiment with technical pipelines bridging the physical and digital worlds to faithfully
-                            <span id="word_19">record</span>, immersively <span id="word_20">represent</span>, and
-                            critically <span id="word_21">recall</span> memories with
-                            <span id="word_22">individuals</span> and a <span id="word_23">broader audience</span>.
-                        </p>
-                        <p class="indent">
-                            In the physical world, I collect moments with 3D scanning technologies from <span
-                                id="word_24">photogrammetry</span>,
-                            <span id="word_25">LiDAR</span>, to <span id="word_26">Gaussian Splatting</span>, alongside
-                            2D recording methods such as
-                            <span id="word_27">illustration</span>, <span id="word_28">photography</span>, and <span
-                                id="word_29">documentary</span>.
-                        </p>
-                        <p class="indent">
-                            In the digital world, I blend realistic collections with surreal <span
-                                id="word_30">animation</span> and <span id="word_31">game</span> environments
-                            to craft narratives through interactive media, including <span id="word_32">websites</span>,
-                            <span id="word_33">installations</span>, and
-                            <span id="word_34">VR</span>/<span id="word_35">AR</span> experiences.
-                        </p>
+        <div id="hero-allArea" class="hero__container">
+            <div id="hero-scrollArea" class="hero__background scrollSnap">
+                <div class="hero__background_top">
+                    <nav id="hero"></nav>
+                    <img src="./images/Hero/Hero_up.png" alt="">
+                </div>
+                <div class="hero__background_mid">
+                    <!-- <a href="#index">index</a> -->
+                    <div class="hero__text">
+                        <p class="padyakke">CURRENT IS THE MEMORY OF THE FUTURE.</p>
                     </div>
                 </div>
-
-
+                <div class="hero__background_down">
+                    <img src="./images/Hero/Hero_down_dark.gif" alt="">
+                    <img class="image-multiply" src="./images/Hero/Hero_down_shadow.png" alt="">
+                </div>
+            </div>
+            <div class="hero__gradient">
 
             </div>
+            <div id="hero-emptyArea" class="hero__empty scrollSnap">
+                <nav id="lab"></nav>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="window_fixed">
+
+        <!-- LAB -->
+        <section class="lab__container" id="lab">
+            <div class="lab__shelf">
+                <img src="./images/Lab/Lab_shelf_dark.png" alt="">
+                <img class="image-pcOnly" src="./images/Lab/Lab_items_pc.png" alt="">
+                <img class="image-mobileOnly" src="./images/Lab/Lab_items_mobile.png" alt="">
+                <div class="lab__shelf_grid">
+                    <div id="shelf-topRight">
+                        <div id="info-Novel" class="lab__info right">
+                            <p class="right">
+                                <span class="title">Novel of Triviality</span>
+                                <br>photography
+                                <br>Collective Memory of
+                                <br>Longtang Community
+                                <br>Shanghai, China
+                                <br>2022
+                            </p>
+                        </div>
+                        <div id="area-Novel">
+                            <a href="./project/NovelOfTriviality.html">
+                                <svg id="area-NovelSVG" class="lab__projectArea" viewBox="0 0 133.93 98.5"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M48.35.5v23.92l15.12,40.85,2.71,10.16v11.96l-6.55,10.61H9.3L.5,87.62v-12.86l2.71-9.48,12.86-39.95V.5h32.27ZM73.85,10.66l-5.42,5.87,2.71,2.48v78.09h62.29V10.66h-59.58Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="shelf-midLeft">
+                        <div id="info-FalseWindows" class="lab__info left">
+                            <p class="left">
+                                <span class="title">False Windows</span>
+                                <br>Animated Film
+                                <br>Collective Memory of
+                                <br>Longtang Community
+                                <br>Shanghai, China
+                                <br>2024
+                            </p>
+                        </div>
+                        <div id="area-FalseWindows">
+                            <a href="./project/FalseWindows.html">
+                                <svg id="area-FalseWindowsSVG" class="lab__projectArea" viewBox="0 0 319.18 168.09"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M297.7,48v40.76l20.89,69.4-7.41,4.38-9.1,2.02h-28.97l-9.77-1.68-9.77-5.39,19.54-67.37v-42.11h24.59ZM108.04,157.82l50.53,3.71,67.71-4.38V37.89l-69.73-2.69-48.51,2.69v119.93ZM62.75.5v65.49l-17.38,13.68v35.13l-7.85-23.55v-34.2h-19.06v34.57L.52,149.56l1.31,4.67,11.59,3.59h30.96v3.71l7.07,3.03,13.47,3.03h17.52l12.46-3.03,6.06-3.03v-83.21l-18.53-12.09V.5h-19.69Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="shelf-midRight">
+                        <div id="info-IntoBirth" class="lab__info right">
+                            <p class="right">
+                                <span class="title">Into Birth</span>
+                                <br>Immersive Website
+                                <br>Individual Memory of
+                                <br>Surreal Birthday
+                                <br>Beijing, China
+                                <br>2024
+                            </p>
+                        </div>
+                        <div id="area-IntoBirth">
+                            <a href="./project/IntoBirth.html">
+                                <svg id="area-IntoBirthSVG" class="lab__projectArea" viewBox="0 0 307.34 142.73"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M51.11.5v48.35l20.12,66.28V33.18h38.33v105.87l-6.56,3.18h-25.62l-5.93-2.33v-6.56l-15.88,4.87H12.46l-11.96-6.14v-9.53L24.42,49.7V.5h26.68ZM159.52,11.58v45.74l-23.08,65.64v6.78l5.19,5.19,12.39,3.07h35.09l9.16-2.96v2.96l9.1,4.23h32.18l6.78-4.66v-60.66l-11.65-5.54v-6.85h-11.65l-2.75-20.96-4.02,20.96h-8.26v6.85l-9.95,6.92v20.75l-15.46-41.93V11.58h-23.08ZM263.35,61.94v21.65l-5,37.38v9.25l2.5,5.74,10.64,5.18h26.65l6.11-5.92,2.59-5.55v-9.62l-6.29-37.2v-20.91h-37.2Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="shelf-bottomLeft">
+                        <div id="info-FoldingBeijing" class="lab__info left">
+                            <p class="left">
+                                <span class="title">Folding Beijing</span>
+                                <br>Popular-science Publication
+                                <br>Collective Memory of
+                                <br>Urban Central Axis
+                                <br>Beijing, China
+                                <br>2021
+                            </p>
+                        </div>
+                        <div id="area-FoldingBeijing">
+                            <a href="./project/FoldingBeijing.html">
+                                <svg id="area-FoldingBeijingSVG" class="lab__projectArea" viewBox="0 0 166.73 149.02"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <polygon
+                                        points="8.6 .5 8.6 90.82 5.97 90.82 .5 112.48 .5 128.07 74.19 128.07 74.19 112.89 72.57 100.95 78.24 100.95 78.24 116.33 79.25 130.5 83.3 132.93 83.3 139.81 99.49 148.52 119.53 148.52 133.3 142.65 140.38 118.36 142 103.38 159.21 87.18 165.28 76.65 146.05 88.8 152.53 66.94 145.24 64.1 147.67 37.79 131.07 32.93 92.2 32.93 74.39 36.98 75.4 61.07 68.52 69.57 74.19 78.48 65.89 86.37 65.89 .5 8.6 .5" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
         </section>
-    </nav>
+
+        <!-- INDEX -->
+        <!-- <section class="index__container hidden" id="index">
+                <a href="#lab" class="scroll-link" data-target="lab">Back to Lab</a>
+            </section> -->
+
+    </div>
+
 
 
     <script src="./src/projectHoverStyle.js"></script>
+    <script src="./src/labHover.js"></script>
     <script src="./src/indexHeaderFooter.js"></script>
 </body>
 
