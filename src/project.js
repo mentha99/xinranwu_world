@@ -1,4 +1,4 @@
-// Animation of Header Navigation Bar
+// 001 * * * * * * * * * * Header Animation * * * * * * * * * * 
 const container = document.querySelector('.single_page');
 const titleBox = document.querySelector('.title');
 

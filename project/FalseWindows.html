@@ -12,33 +12,39 @@
         rel="stylesheet">
 
     <!-- styles -->
-    <link rel="stylesheet" href="../../styles/modern-normalize.css">
-    <link rel="stylesheet" href="../../styles/style.css">
-    <link rel="stylesheet" href="../../styles/conponents/header.css">
+    <link rel="stylesheet" href="/styles/modern-normalize.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/conponents/hero&lab.css">
+    <link rel="stylesheet" href="/styles/conponents/works&thoughts.css">
+    <link rel="stylesheet" href="/styles/conponents/header&footer.css">
     <link rel="stylesheet" href="../../styles/conponents/project.css">
-    <link rel="stylesheet" href="../../styles/utils.css">
+    <link rel="stylesheet" href="/styles/utils.css">
 
-    <title>mentha's work</title>
+    <title>xinran | False Windows</title>
 </head>
 
 <body>
-    <!-- header -->
-    <project-header title="False Windows"></project-header>
+
+    <!-- * * * * * ABOUT & LIST * * * * * -->
+    <projects-list></projects-list>
+    <!-- * * * * * HEADER * * * * * -->
+    <project-header next="./CoupleOfSingles.html" title="False Windows"></project-header>
 
     <main>
         <div class="single_page">
             <div class="bg_image" style="background-image: url('../images/FalseWindows/preview.gif');">
             </div>
-            
+
             <div id="top"></div>
 
             <section class="slide_first">
-                
+
                 <div id="FalseWindows_title" class="title container">
                     <div class="title__container">
                         <img class="title__logo" src="/images/FalseWindows/logo.png" alt="False Windows">
                         <h2 class="title__info">
-                            False Windows | 2024<br>collective memory of<br>Longtang Community<br>West Nanjing Road, Shanghai
+                            False Windows | 2024<br>collective memory of<br>Longtang Community<br>West Nanjing Road,
+                            Shanghai
                             <br><br>Animated Film, 2’02’’<br>with 3D scans in real scene<br>and AI animation assistance
                         </h2>
                         <!-- <h2 class="title__info">
@@ -353,10 +359,11 @@
     </main>
     <!-- <footer></footer> -->
 
-
-    <!-- <script type="module" src="./src/main.js"></script> -->
-    <script src="../src/script.js"></script>
-    <script src="../info/headerFooterManager.js"></script>
+    <!-- JavaScript -->
+    <script src="../src/htmlElements.js"></script>
+    <script src="../src/project.js"></script>
+    <script src="../src/main.js"></script>
+    
 </body>
 
 </html>

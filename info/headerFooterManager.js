@@ -2,19 +2,19 @@ class projectHeader extends HTMLElement {
     connectedCallback() {
         // Get the project title from the custom attribute
         const projectTitle = this.getAttribute('title') || 'Default Project';
-
+        const nextProject = this.getAttribute('next');
         this.innerHTML = `
         <header class="header container">
             <nav>
                 <ul class="header__menu">
                     <li>
-                        <a class="header__link" href="../index.html">←back to lab</a>
+                        <a class="header__link" href="../index.html#lab">←back to lab</a>
                     </li>
                     <li>
-                        <a class="header__link" href="../info/projects.html">index</a>
+                        <a id="link-lab-list" class="header__link">view all projects</a>
                     </li>
                     <li>
-                        <a class="header__link" href="../info/about.html">about</a>
+                    <a class="header__link" href="${nextProject}">next project→</a>
                     </li>
                 </ul>
             </nav>
@@ -25,7 +25,7 @@ class projectHeader extends HTMLElement {
                     <a class="header__link" href="#top">↑${projectTitle}</a>
                 </li>
                 <li>
-                    <a class="header__link" href="#next">next project→</a>
+                    <a id="link-about" class="header__link" href="">about</a>
                 </li>
             </ul>
         </header>
@@ -34,3 +34,4 @@ class projectHeader extends HTMLElement {
 }
 
 customElements.define('project-header', projectHeader);
+

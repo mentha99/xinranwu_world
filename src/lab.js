@@ -1,3 +1,4 @@
+// 001 * * * * * * * * * * Shelf Item Hover and Info * * * * * * * * * * 
 const areaNovel = document.getElementById('area-NovelSVG');
 const infoNovel = document.getElementById('info-Novel');
 const areaFalseWindow = document.getElementById('area-FalseWindowsSVG');
