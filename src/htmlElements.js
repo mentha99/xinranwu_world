@@ -110,7 +110,7 @@ class projectsList extends HTMLElement {
                                     <span id="word_11">urban spaces</span> and <span id="word_12">rural landscapes</span>.
                                 </p>
                                 <p class="indent">
-                                    At a <span id="word_13">micro</span> scale, I’m interested in how individual memory is <span
+                                    At a <span id="word_13">micro</span> scale, I'm interested in how individual memory is <span
                                         id="word_14">formed</span>,
                                     <span id="word_15">transmitted</span>, and <span id="word_16">stored</span> through
                                     <span id="word_17">sensory process</span> and <span id="word_18">neural mechanisms</span>.
@@ -148,22 +148,21 @@ class projectsList extends HTMLElement {
                     <div id="about-text" class="about_container U_bgWhiteGradient">
                         <div class="about_text">
                             <p>
-                                Xinran Wu is a researcher and artist with a deep interest in the hybridization of the physical
-                                present and fictional world-building. As a former architect, her research focuses on the intangible
-                                shaping from urbanization process on collective memory, while also examining the tangible influence
-                                of neural mechanisms on individual memory. Obsessed with experimental pipelines that combine
-                                cutting-edge 3D scanning technolog with CGI software, game engines and generative AI, she creates
-                                immersive and interactive experiences to record, represent, and critically reflect on memory.
+                                Xinran Wu is a research-based artist and creative technologist trying to blend the physical present and fictional world-building into surreal narratives.
+                            </p>
+                            <p>
+                                Her research explores the collective memory across the cultural landscape shaped by China's urbanization process, as well as the individual memory formed by the human perception and neural mechanisms.
+                            </p>
+                            <p>
+                                She experiments with technical pipelines between recording (3D scanning / documentary / photography) and representation (game / animation / installation), creating immersive and interactive story-telling to critically reflect on memories.
                             </p>
                         </div>
-                        <div class="about_text">
+                        <div id="about-text-secondPara" class="about_text">
                             <p>
-                                Xinran holds a Bachelor of Architecture, graduating as the Outstanding Graduate of Shanghai from
-                                Tongji University, and participated in an exchange program at the University of Innsbruck in
-                                Austria. Her architectural practice spans Tokyo, Beijing, and rural China, contributing to projects
-                                that have received the 2024 Dezeen Award and the UNESCO Global Awards for World Heritage. Currently,
-                                she is pursuing a Master of Science in Fiction and Entertainment at SCI-Arc, beginning her journey
-                                as a new media artist in Los Angeles.
+                                Xinran holds a Bachelor of Architecture from Tongji University with the honor of Shanghai Outstanding Graduate Award. As a former architect, she has studied and practiced in cities and villages among China, Japan and Europe. Her collaborative research and design projects have received several prizes including the UNESCO Global Awards for World Heritage and the Dezeen Award 2024. 
+                            </p>
+                            <p>
+                                She is currently in her master study in Fiction and Entertainment at SCI-Arc, exploring the journey with new media art in Los Angeles.
                             </p>
                         </div>
                     </div>

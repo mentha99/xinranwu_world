@@ -88,24 +88,36 @@ main.blur {
     pointer-events: none;
     transform: translate(-50%,0);
     transition: all 0.5s ease;
-}
-#list-window.down{
-    transform: translate(-50%, 11rem);
+    /* overflow-y: scroll; */
+    overflow-y: scroll;
+    z-index: 76;
 }
 
+/* #list-window.down{
+    transform: translate(-50%, 14vw);
+}
+@media (max-width: 800px) {
+    #list-window.down{
+        transform: translate(-50%, 88vh);
+    }
+} */
 
 
 .U_FixWindow {
     /* background-color: rgba(255, 235, 205, 0.318); */
+    /* position: absolute; */
     position: fixed;
     max-width: 1536px;
+    /* min-height: 100vh; */
     padding-left: var(--size-3xl);
     padding-right: var(--size-3xl);
-    height: 100%;
+    /* max-height: auto; */
+    height: 100vh;
     width: 100%;
     z-index: 50;
     left: 50%;
     /* transform: translateX(-50%); */
+    overflow-y: scroll;
 
     display: flex;
     justify-content: flex-end;
@@ -138,15 +150,22 @@ main.blur {
     /* background-color: pink; */
     margin-top: 4rem;
     display: grid;
-    grid-template-columns:auto auto;
+    grid-template-columns:1fr 1fr;
     grid-template-rows: 1fr;
-    column-gap: var(--size-xl);
+    column-gap: var(--size-l);
 
     max-width: 100%;
     max-height: 100%;
     height: 100px;
 }
-
+/* M */
+@media (max-width: 800px) {
+    .list__grid{
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 /* -------------- THOUGHTS --------------  */
 .thoughts__container {
@@ -162,9 +181,9 @@ main.blur {
 .thoughts__text {
     width: 100%;
     height: max-content;
-    margin-bottom: var(--size-xl);
+    margin-bottom: var(--size-s);
     padding-top: var(--size-m);
-    padding-bottom: var(--size-2xl);
+    padding-bottom: var(--size-l);
     padding-left: var(--size-l);
     padding-right: var(--size-l);
     /* word-wrap: break-word; */
@@ -208,7 +227,7 @@ main.blur {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: max-content;
+    /* width: max-content; */
     height: max-content;
 
     padding-top: var(--size-m);
@@ -276,13 +295,13 @@ main.blur {
         padding-top: 0;
     }
 
-    .index__work a {
+    /* .index__work a {
         font-size: var(--size-l);
     }
 
     .index__work p {
         font-size: var(--size-l);
-    }
+    } */
 }
 
 
@@ -292,19 +311,27 @@ main.blur {
     transition: 0s;
     pointer-events: none;
     transform: translate(-50%, 0);
+    /* overflow-y: scroll; */
+    overflow-y: visible;
+    z-index: 75;
 }
 
 .about_container {
     /* background-color: rgba(0, 255, 255, 0.401); */
+    position: relative;
     width: max-content;
     height: max-content;
     margin-top: 2.5rem;
+    overflow-y: scroll;
+    /* margin-bottom: 0; */
 
-    display: flex;
+    /* display: flex;
     align-content: flex-end;
     flex-direction: row;
-    justify-content: flex-end;
-    gap: var(--size-m);
+    justify-content: flex-end; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--size-xl);
 
     padding-top: var(--size-m);
     padding-bottom: var(--size-2xl);
@@ -317,12 +344,18 @@ main.blur {
 }
 
 .about_text p {
-    padding: 0;
     margin: 0;
-    /* max-width: 60ch; */
-    min-width: 30ch;
+    padding: 0;
+    margin-bottom: var(--size-s);
+    /* max-width: 50ch; */
+    /* min-width: 30ch; */
     font-size: var(--size-m);
     font-weight: var(--font-ultralight);
+    /* line-height: 1.2em; */
+}
+
+#about-text-secondPara{
+    padding-left: 0.85rem;
 }
 
 @media (max-width: 800px) {
@@ -335,7 +368,7 @@ main.blur {
         align-content: flex-end;
         flex-direction: column;
         justify-content: flex-end;
-        gap: var(--size-xl);
+        gap: 0;
 
         padding-top: var(--size-l);
         padding-bottom: var(--size-3xl);
@@ -346,14 +379,19 @@ main.blur {
     .about_text {
         width: 100%;
         height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
     }
 
     .about_text p {
         max-width: 100%;
         min-width: 100%;
-        padding: 0;
-        margin: 0;
-        font-size: var(--size-m);
-        font-weight: var(--font-ultralight);
+        line-height: 1.25em;
+        margin-bottom: var(--size-xl);
+    }
+
+    #about-text-secondPara{
+        padding-left:0;
     }
 }

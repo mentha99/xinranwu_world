@@ -4,6 +4,7 @@
 
 
 // 001 * * * * * * * * * * About & List Appearance * * * * * * * * * * 
+
 // links
 const linkList = document.getElementById("link-list");
 const linkAbout = document.getElementById("link-about");
@@ -19,6 +20,8 @@ const textWorks = document.getElementById("works-text");
 const textThoughts1 = document.getElementById("thought-text1");
 const textThoughts2 = document.getElementById("thought-text2");
 const textAbout = document.getElementById("about-text");
+const textAbout_height = textAbout.getBoundingClientRect().height - 18;
+// console.log(textAbout_height);
 
 // nav location #
 const labSection = document.getElementById("lab");
@@ -42,27 +45,68 @@ window.addEventListener("scroll", () => {
 
 let listShowOrNot = false;
 let aboutShowOrNot = false;
+var widthMaxWidth = window.matchMedia("(max-width: 800px)")
 
-linkAbout.addEventListener('click', (e) => {
-    aboutShowOrNot = !aboutShowOrNot;
-    console.log("about is clicked");
-    e.preventDefault();
-    appearAboutAndList();
+let widthSmallerThan800 = false;
+function checkWidthSmllerThan800(event) {
+    if (event.matches) {
+        widthSmallerThan800 = true;
+        // console.log("Viewport is 800px or narrower.");
+    } else {
+        // console.log("Viewport is wider than 800px.");
+    }
+}
+const mediaQuery = window.matchMedia("(max-width: 800px)");
+mediaQuery.addEventListener("change", checkWidthSmllerThan800);
+checkWidthSmllerThan800(mediaQuery);
 
-});
-linkList.addEventListener('click', (e) => {
-    listShowOrNot = !listShowOrNot;
-    console.log("list is clicked");
-    e.preventDefault();
-    appearAboutAndList();
+if (!widthSmallerThan800) {
+    // for PC, could show list AND about at the same time
+    linkAbout.addEventListener('click', (e) => {
+        aboutShowOrNot = !aboutShowOrNot;
+        console.log("about is clicked");
+        e.preventDefault();
+        appearAboutAndList();
+    });
+    linkList.addEventListener('click', (e) => {
+        listShowOrNot = !listShowOrNot;
+        console.log("list is clicked");
+        e.preventDefault();
+        appearAboutAndList();
+    });
+} else {
+    // for mobile, only show list OR about at the same time
+    linkAbout.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log("about is clicked");
+        aboutShowOrNot = !aboutShowOrNot;
+        if (aboutShowOrNot && listShowOrNot) {
+            listShowOrNot = !listShowOrNot;
+        }
 
-});
+        appearAboutAndList();
+    });
+    linkList.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log("list is clicked");
+        listShowOrNot = !listShowOrNot;
+        if (aboutShowOrNot && listShowOrNot) {
+            aboutShowOrNot = !aboutShowOrNot;
+        }
+
+        appearAboutAndList();
+    });
+}
+
 
 function appearAboutAndList() {
     if (aboutShowOrNot && !listShowOrNot) {
-        windowList.classList.remove('down');
+        // windowList.classList.remove('down');
+        // windowList.style.transform="translate(-50%, ${textAbout_height}px)";
+        windowList.style.transform = "translate(-50%, 0)";
+
         windowAbout.style.opacity = "1";
-        windowAbout.style.pointerEvents = "auto";
+        // windowAbout.style.pointerEvents = "auto";
         windowList.style.opacity = "0";
         windowList.style.pointerEvents = "none";
         mainElement.classList.add('blur');
@@ -73,9 +117,13 @@ function appearAboutAndList() {
         textWorks.classList.remove('appear');
 
         linkList.textContent = "view all projects";
+        linkAbout.textContent = "hide about";
     }
     else if (!aboutShowOrNot && listShowOrNot) {
-        windowList.classList.remove('down');
+        // windowList.classList.remove('down');
+        // windowList.style.transform="translate(-50%, ${textAbout_height}px)";
+        windowList.style.transform = "translate(-50%, 0)";
+
         windowList.style.opacity = "1";
         windowList.style.pointerEvents = "auto";
         windowAbout.style.opacity = "0";
@@ -88,13 +136,17 @@ function appearAboutAndList() {
         textAbout.classList.remove('appear');
 
         linkList.textContent = "hide all projects";
+        linkAbout.textContent = "about";
     }
     else if (aboutShowOrNot && listShowOrNot) {
-        windowList.classList.add('down');
+        // windowList.classList.add('down');
+        windowList.style.transform = `translate(-50%, ${textAbout_height}px)`;
+        // windowList.style.transform="translate(-50%, 0)";
+
         windowList.style.opacity = "1";
         windowList.style.pointerEvents = "auto";
         windowAbout.style.opacity = "1";
-        windowAbout.style.pointerEvents = "auto";
+        // windowAbout.style.pointerEvents = "auto";
         mainElement.classList.add('blur');
 
         textAbout.classList.add('appear');
@@ -103,9 +155,13 @@ function appearAboutAndList() {
         textWorks.classList.add('appear');
 
         linkList.textContent = "hide all projects";
+        linkAbout.textContent = "hide about";
     }
     else if (!aboutShowOrNot && !listShowOrNot) {
-        windowList.classList.remove('down');
+        // windowList.classList.remove('down');
+        // windowList.style.transform="translate(-50%, ${textAbout_height}px)";
+        windowList.style.transform = "translate(-50%, 0)";
+
         mainElement.classList.remove('blur');
 
         textAbout.classList.remove('appear');
@@ -114,6 +170,7 @@ function appearAboutAndList() {
         textWorks.classList.remove('appear');
 
         linkList.textContent = "view all projects";
+        linkAbout.textContent = "about";
 
         setTimeout(() => {
             windowList.style.opacity = "0";
