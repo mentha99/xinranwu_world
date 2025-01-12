@@ -102,7 +102,7 @@ function appearAboutAndList() {
         textThoughts2.classList.add('appear');
         textWorks.classList.add('appear');
 
-        linkList.textContent = "view all projects";
+        linkList.textContent = "hide all projects";
     }
     else if (!aboutShowOrNot && !listShowOrNot) {
         windowList.classList.remove('down');
@@ -113,7 +113,7 @@ function appearAboutAndList() {
         textThoughts2.classList.remove('appear');
         textWorks.classList.remove('appear');
 
-        linkList.textContent = "hide all projects";
+        linkList.textContent = "view all projects";
 
         setTimeout(() => {
             windowList.style.opacity = "0";
