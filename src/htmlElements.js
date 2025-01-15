@@ -48,7 +48,7 @@ class projectsList extends HTMLElement {
                         <div id="works-text" class="works__container U_bgWhiteGradient">
                             <ul>
                                 <li id="SitDown" class="index__work WIP">
-                                    <a href="./project/SitDown.html">Sit Down, My Stranger (WIP)</a>
+                                    <a href="../project/SitDown.html">Sit Down, My Stranger (WIP)</a>
                                     <p>, VR Experience and Performance, United States & China, 2024.9-</p>
                                 </li>
                                 <li id="IntoBirth" class="index__work">
