@@ -55,10 +55,11 @@
     grid-row: 1/2;
     grid-column: 1/2;
     display: grid;
-    grid-template-rows: 1.5fr 0.1fr 1fr;
+    grid-template-rows: 1.2fr 65px 1fr;
     grid-template-columns: 1fr;
     position: relative;
     pointer-events: auto;
+    background-color: black;
 }
 
 .hero__background img {
@@ -89,6 +90,168 @@
     grid-column: 1/2;
 }
 
+#hero-me-grid {
+    height: 100%;
+    width: 710px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    color: var(--clr-light);
+
+    display: grid;
+    grid-template-columns: 3.6fr 6.4fr;
+    grid-template-rows: 10px 13px 15px 26px;
+    grid-template-areas:
+        "name field"
+        "name contact"
+        ".  ."
+        "thought thought";
+}
+
+#hero-me-name {
+    position: relative;
+    grid-area: name;
+}
+
+#hero-me-name p {
+    position: absolute;
+    font-size: 31px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#hero-me-field {
+    padding-left: var(--size-s);
+    position: relative;
+    grid-area: field;
+}
+
+#hero-me-field p {
+    position: absolute;
+    top: -13px;
+    font-size: 22px;
+}
+
+#hero-me-contact {
+    padding-left: var(--size-s);
+    grid-area: contact;
+    position: flex;
+}
+
+#hero-me-contact p {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    color: var(--clr-light);
+    font-size: 8.05px;
+    text-decoration: none;
+}
+
+#hero-me-contact p a {
+    color: var(--clr-light);
+    font-size: 8.05px;
+    text-decoration: none;
+}
+
+#hero-me-thought {
+    position: relative;
+    grid-area: thought;
+}
+
+#hero-me-thought p {
+    position: absolute;
+    font-size: 25.25px;
+    top: 50%;
+    /* left: 50%; */
+    transform: translate(0, -50%);
+    /* padding-left: -2px; */
+}
+
+/* change the me information size */
+@media (max-width: 800px) {
+    .hero__background {
+        grid-template-rows: 1fr 0.6fr 1fr;
+    }
+
+    .hero__background img {
+        height: 60%;
+        object-fit: cover;
+    }
+
+    .hero__background_down img {
+        height: 45%;
+        object-fit: cover;
+    }
+
+    #hero-me-grid {
+        height: 32px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -200%);
+        /* color: var(--clr-light); */
+
+        /* display: grid; */
+        grid-template-columns: 1fr;
+        grid-template-rows:35px 26px 16px 60px 30px;
+        grid-template-areas:
+            "name"
+            "field"
+            "contact"
+            "."
+            "thought";
+    }
+
+    #hero-me-grid div {
+        position: relative;
+        height: fit-content;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    #hero-me-grid div p {
+        /* position: absolute; */
+        width: 100vw;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        top:0;
+        bottom:0;
+    }
+
+    #hero-me-name p {
+        font-size: 30px;
+    }
+
+    #hero-me-field p {
+        font-size: 20px;
+    }
+
+    #hero-me-thought p {
+        font-size: 14px;
+    }
+
+    #hero-me-contact {
+        grid-area: contact;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #hero-me-contact p {
+        font-size: 12px;
+        text-decoration: none;
+    }
+    
+    #hero-me-contact p a {
+        font-size: 12px;
+    }
+
+    
+}
+
 .hero__background_down {
     position: relative;
     background-color: black;
@@ -109,17 +272,6 @@
     pointer-events: none;
 }
 
-
-@media (max-width: 800px) {
-    .hero__background {
-        grid-template-rows: 1fr 0.4fr 1fr;
-    }
-
-    .hero__background img {
-        height: 100%;
-        object-fit: cover;
-    }
-}
 
 .scrollSnap {
     scroll-snap-align: start;

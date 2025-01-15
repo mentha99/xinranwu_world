@@ -53,7 +53,7 @@
         <!-- * * * * * FOOTER * * * * * -->
         <footer id="footer-lab" class="footer container">
             <nav>
-                <a id="link-hero-lab" class="footer__text light link" href="#lab">to the lab<br>↓</a>
+                <a id="link-hero-lab" class="footer__text light" href="#lab">to the lab<br>↓</a>
             </nav>
         </footer>
         <footer id="footer-lab" class="footer container">
@@ -73,9 +73,24 @@
                         <img src="./images/Hero/Hero_up.png" alt="">
                     </div>
                     <div class="hero__background_mid">
-                        <!-- <a href="#index">index</a> -->
-                        <div class="hero__text">
-                            <p class="padyakke">CURRENT IS THE MEMORY OF THE FUTURE.</p>
+                        <div id="hero-me-grid" class="padyakke">
+                            <div id="hero-me-name">
+                                <p>XINRAN WU</p>
+                            </div>
+                            <div id="hero-me-field">
+                                <p>new media art & creative tech</p>
+                            </div>
+                            <div id="hero-me-contact">
+                                <!-- <div id="hero-me-contact-email" style="grid-area: contact;height: 100%;background-color: aqua;">
+                                    <p>contact: wuxinran809@gmail.com |</p>
+                                </div> -->
+                                <p><a href="mailto:wuxinran809@gmail.com">contact: wuxinran809@gmail.com |</a></p>
+                                <p><a href="https://www.instagram.com/_mentha99/"> instagram: @mentha99 |</a></p>
+                                <p> Los Angeles & Beijing</p>
+                            </div>
+                            <div id="hero-me-thought">
+                                <p>"CURRENT IS THE MEMORY OF FUTURE."</p>
+                            </div>
                         </div>
                     </div>
                     <div class="hero__background_down">
@@ -197,6 +212,13 @@
         </div>
     </main>
 
+    <!-- <script>
+        const linkEmail = document.getElementById('hero-me-contact-email');
+        linkEmail.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = 'mailto:wuxinran809@gmail.com';
+        });
+    </script> -->
 
     <script src="./src/htmlElements.js"></script>
     <script src="./src/lab.js"></script>
