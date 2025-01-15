@@ -1,6 +1,8 @@
 // 001 * * * * * * * * * * Header Animation * * * * * * * * * * 
 const container = document.querySelector('.single_page');
 const titleBox = document.querySelector('.title');
+const novelContent = document.getElementById('project-content');
+const novelPreview = document.getElementById('project-preview');
 
 container.addEventListener('scroll', () => {
     // console.log('Scrolling...');
@@ -18,6 +20,13 @@ container.addEventListener('scroll', () => {
     else {
         header.classList.add('scroll');
         subheader.classList.add('appear');
+    }
+
+    const contentRect = novelContent.getBoundingClientRect();
+    if (contentRect.top <= viewportHeight / 2) {
+        novelPreview.classList.add('blur'); // Add blur effect
+    } else {
+        novelPreview.classList.remove('blur'); // Remove blur effect
     }
 });
 

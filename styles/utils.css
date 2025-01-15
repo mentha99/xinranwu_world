@@ -70,6 +70,13 @@ h2 {
 }
 
 
+/* .F_Roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-regular);
+  font-style: normal;
+} */
+
 /*---------- screen size fit (laptop first) ----------*/
 .container {
     max-width: 1536px;
