@@ -1,6 +1,8 @@
 // 001 * * * * * * * * * * Header Animation * * * * * * * * * * 
 const container = document.querySelector('.single_page');
 const titleBox = document.querySelector('.title');
+
+//first page of content
 const novelContent = document.getElementById('project-content');
 const novelPreview = document.getElementById('project-preview');
 

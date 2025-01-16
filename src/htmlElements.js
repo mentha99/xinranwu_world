@@ -91,6 +91,10 @@ class projectsList extends HTMLElement {
                                     <a href="../project/FloodedTeaHouse.html">Flooded Tea House</a>
                                     <p>, Architectural Proposal, Shandong, China, 2020</p>
                                 </li>
+                                <li id="BlackBoxOfInterlock" class="index__work">
+                                    <a href="../project/BlackBoxOfInterlock.html">Black Box of Interlock</a>
+                                    <p>, Mapping and Photography, Shanghai, China, 2018-2019</p>
+                                </li>
                             </ul>
                         </div>
                         <div class="thoughts__container">

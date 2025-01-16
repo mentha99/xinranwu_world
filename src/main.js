@@ -237,4 +237,4 @@ setupEventListener("NovelOfTriviality", [1, 4, 5, 7, 8, 10, 11, 19, 28], "cyan")
 setupEventListener("TheRiver", [2, 4, 5, 7, 8, 10, 11, 20, 23], "pink");  // You can change target numbers here
 setupEventListener("FoldingBeijing", [2, 4, 5, 6, 8, 10, 11, 20, 23, 27], "orange");  // Customize target numbers for "FalseWindows"
 setupEventListener("FloodedTeaHouse", [2, 3, 5, 6, 8, 10, 12], "green");  // Customize target numbers for "FalseWindows"
-// setupEventListener("NovelOfTriviality", [1,4,5,6,7,8,10,11,19,20,21,23,24,25,30],"cyan");  // Customize target numbers for "FalseWindows"
+setupEventListener("BlackBoxOfInterlock", [1,4,5,6,7,8,10,11,27,28],"cyan");
