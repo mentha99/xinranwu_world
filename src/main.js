@@ -16,7 +16,8 @@ const windowAbout = document.getElementById("about-window");
 
 // text boxs with .U_bgWhiteGradient
 // const BGWhiteGradient = document.querySelectorAll('.U_bgWhiteGradient');
-const textWorks = document.getElementById("works-text");
+const textWorks1 = document.getElementById("works-text1");
+const textWorks2 = document.getElementById("works-text2");
 const textThoughts1 = document.getElementById("thought-text1");
 const textThoughts2 = document.getElementById("thought-text2");
 const textAbout = document.getElementById("about-text");
@@ -64,14 +65,15 @@ if (!widthSmallerThan800) {
     // for PC, could show list AND about at the same time
     linkAbout.addEventListener('click', (e) => {
         aboutShowOrNot = !aboutShowOrNot;
-        console.log("about is clicked");
+        // console.log("about is clicked");
         e.preventDefault();
         appearAboutAndList();
     });
     linkList.addEventListener('click', (e) => {
         listShowOrNot = !listShowOrNot;
-        console.log("list is clicked");
+        // console.log("list is clicked");
         e.preventDefault();
+        // filterProjects('all');
         appearAboutAndList();
     });
 } else {
@@ -83,7 +85,7 @@ if (!widthSmallerThan800) {
         if (aboutShowOrNot && listShowOrNot) {
             listShowOrNot = !listShowOrNot;
         }
-
+        // filterProjects('all');
         appearAboutAndList();
     });
     linkList.addEventListener('click', (e) => {
@@ -93,7 +95,7 @@ if (!widthSmallerThan800) {
         if (aboutShowOrNot && listShowOrNot) {
             aboutShowOrNot = !aboutShowOrNot;
         }
-
+        // filterProjects('all');
         appearAboutAndList();
     });
 }
@@ -114,7 +116,8 @@ function appearAboutAndList() {
         textAbout.classList.add('appear');
         textThoughts1.classList.remove('appear');
         textThoughts2.classList.remove('appear');
-        textWorks.classList.remove('appear');
+        textWorks1.classList.remove('appear');
+        textWorks2.classList.remove('appear');
 
         linkList.textContent = "view all projects";
         linkAbout.textContent = "hide about";
@@ -132,7 +135,8 @@ function appearAboutAndList() {
 
         textThoughts1.classList.add('appear');
         textThoughts2.classList.add('appear');
-        textWorks.classList.add('appear');
+        textWorks1.classList.add('appear');
+        textWorks2.classList.add('appear');
         textAbout.classList.remove('appear');
 
         linkList.textContent = "hide all projects";
@@ -152,7 +156,9 @@ function appearAboutAndList() {
         textAbout.classList.add('appear');
         textThoughts1.classList.add('appear');
         textThoughts2.classList.add('appear');
-        textWorks.classList.add('appear');
+        textWorks1.classList.add('appear');
+        textWorks2.classList.add('appear');
+
 
         linkList.textContent = "hide all projects";
         linkAbout.textContent = "hide about";
@@ -161,13 +167,13 @@ function appearAboutAndList() {
         // windowList.classList.remove('down');
         // windowList.style.transform="translate(-50%, ${textAbout_height}px)";
         windowList.style.transform = "translate(-50%, 0)";
-
         mainElement.classList.remove('blur');
 
         textAbout.classList.remove('appear');
         textThoughts1.classList.remove('appear');
         textThoughts2.classList.remove('appear');
-        textWorks.classList.remove('appear');
+        textWorks1.classList.remove('appear');
+        textWorks2.classList.remove('appear');
 
         linkList.textContent = "view all projects";
         linkAbout.textContent = "about";
@@ -237,4 +243,78 @@ setupEventListener("NovelOfTriviality", [1, 4, 5, 7, 8, 10, 11, 19, 28], "cyan")
 setupEventListener("TheRiver", [2, 4, 5, 7, 8, 10, 11, 20, 23], "pink");  // You can change target numbers here
 setupEventListener("FoldingBeijing", [2, 4, 5, 6, 8, 10, 11, 20, 23, 27], "orange");  // Customize target numbers for "FalseWindows"
 setupEventListener("FloodedTeaHouse", [2, 3, 5, 6, 8, 10, 12], "green");  // Customize target numbers for "FalseWindows"
-setupEventListener("BlackBoxOfInterlock", [1,4,5,6,7,8,10,11,27,28],"cyan");
+setupEventListener("BlackBoxOfInterlock", [1, 4, 5, 6, 7, 8, 10, 11, 27, 28], "cyan");
+
+
+// 003 * * * * * * * * * * Projects Filter * * * * * * * * * * 
+// Define the categories for each project
+const projectCategories = {
+    SitDown: ['art', 'game', 'film', 'immersive', '3dscan', 'participatory', 'wip'],
+    IntoBirth: ['art', 'game', 'immersive', '3dscan', 'participatory'],
+    PHS: ['art', 'film', '3dscan', 'commission', 'wip'],
+    FalseWindows: ['art', 'film', '3dscan', 'architecture', 'participatory'],
+    CoupleOfSingles: ['art', 'design', 'game', 'immersive', '3dscan', 'architecture', 'participatory', 'wip'],
+    CoveredBridge: ['design', 'architecture', 'participatory', 'commission'],
+    TrilogyOfTrees: ['art', 'photography'],
+    NovelOfTriviality: ['art', 'photography', 'architecture', 'participatory'],
+    TheRiver: ['design', 'architecture'],
+    FoldingBeijing: ['art', 'design', 'architecture', 'commission'],
+    FloodedTeaHouse: ['art', 'design', 'architecture'],
+    BlackBoxOfInterlock: ['art', 'design', 'architecture', 'participatory'],
+    // Add more projects and their categories here
+};
+
+// Function to filter projects
+function filterProjects(category) {
+    const projects = document.querySelectorAll('.index__work');
+
+    projects.forEach(project => {
+        const projectId = project.id;
+
+        if (category === 'all' || (projectCategories[projectId] && projectCategories[projectId].includes(category))) {
+            project.style.display = 'block';
+        } else {
+            project.style.display = 'none';
+        }
+    });
+}
+
+// Add click event listeners to category buttons
+document.querySelectorAll('.index__classButton').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove 'selected' class from all buttons
+        document.querySelectorAll('.index__classButton').forEach(btn => btn.classList.remove('selected'));
+
+        // Add 'selected' class to the clicked button
+        button.classList.add('selected');
+
+        // Filter projects based on the selected category
+        const category = button.id.replace('class-', '');
+        filterProjects(category);
+    });
+});
+
+// Initially show all projects
+filterProjects('all');
+
+// 004 * * * * * * * * * * Technical Archive Hover * * * * * * * * * * 
+const IntoBirth_log = document.getElementById("IntoBirth-log");
+const FalseWindows_log = document.getElementById("FalseWindows-log");
+const IntoBirth = document.getElementById("IntoBirth");
+const FalseWindows = document.getElementById("FalseWindows");
+
+function logToProjectListerner(hoverProject, hightlightProject, color){
+    if (hoverProject) {
+        hoverProject.addEventListener("mouseover", () => {
+            hightlightProject.classList.add('logHighlight');
+        });
+
+        hoverProject.addEventListener("mouseout", () => {
+            hightlightProject.classList.remove('logHighlight');
+        });
+    }
+}
+
+
+logToProjectListerner(IntoBirth_log, IntoBirth);
+logToProjectListerner(FalseWindows_log, FalseWindows);

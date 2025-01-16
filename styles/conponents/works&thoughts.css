@@ -74,6 +74,10 @@ main.blur {
     opacity: 0;
 }
 
+.U_bgWhiteGradient.short {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.75) 30%, rgb(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0) 100%);
+}
+
 .U_bgWhiteGradient.appear {
     opacity: 1;
     transform: translateY(0%);
@@ -86,7 +90,7 @@ main.blur {
     opacity: 0;
     transition: 0s;
     pointer-events: none;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     transition: all 0.5s ease;
     /* overflow-y: scroll; */
     overflow-y: scroll;
@@ -150,7 +154,7 @@ main.blur {
     /* background-color: pink; */
     margin-top: 4rem;
     display: grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
     grid-template-rows: 1fr;
     column-gap: var(--size-l);
 
@@ -158,9 +162,10 @@ main.blur {
     max-height: 100%;
     height: 100px;
 }
+
 /* M */
 @media (max-width: 800px) {
-    .list__grid{
+    .list__grid {
         margin-top: 2.5rem;
         display: flex;
         flex-direction: column;
@@ -221,9 +226,17 @@ main.blur {
 
 
 /* -------------- WORKS --------------  */
-.works__container {
+.works__all {
     grid-column: 2/3;
     grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    height: max-content;
+    position: relative;
+}
+
+.works__container {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -231,26 +244,71 @@ main.blur {
     height: max-content;
 
     padding-top: var(--size-m);
-    padding-bottom: var(--size-2xl);
+    padding-bottom: var(--size-xl);
     padding-left: var(--size-l);
     padding-right: var(--size-l);
-    
 }
 
-.index__work {
+.works__container ul {
+    margin-bottom: var(--size-s);
+}
+
+.index__work,
+.index__otherwork {
     list-style: none;
     padding-bottom: var(--size-s);
+    padding-left: var(--size-s);
+    margin-left: -0.4rem;
+}
+
+.index__class {
+    list-style: none;
+    padding-bottom: var(--size-s);
+}
+
+.index__class:hover {
+    cursor: pointer;
 }
 
 .index__work:hover {
     background-color: var(--clr-highlight);
 }
 
-.index__work:hover a {
+.index__otherwork:hover {
+    background-color: rgba(135, 146, 143, 0.75);
+    /* background-color: var(--clr-darkgrey); */
+}
+
+
+.index__class h2,
+button {
+    display: inline-block;
+
+    margin-top: var(--size-xs);
+    margin-left: -0.4rem;
+    margin-right: var(--size-s);
+    padding: 0 var(--size-sm) 0.025rem var(--size-s);
+
+    height: 1.6rem;
+    width: fit-content;
+    border-radius: 0.8rem;
+
+    font-size: var(--size-m);
+    font-weight: var(--font-light);
+    color: var(--clr-light);
+    text-decoration: none;
+    letter-spacing: 0;
+
+    opacity: 0.75;
+}
+
+.index__work:hover a,
+.index__otherwork:hover a {
     text-decoration: underline;
 }
 
-.index__work a {
+.index__work a,
+.index__otherwork a {
     display: inline;
     font-size: var(--size-m);
     font-weight: var(--font-light);
@@ -262,8 +320,14 @@ main.blur {
 
 .index__works li a:hover~li {
     background-color: var(--clr-highlight);
-    /* font-weight: var(--font-regular); */
-    /* font-style: oblique; */
+}
+
+.index__otherworks li a:hover~li {
+    background-color: var(--clr-darkgrey);
+}
+
+.index__work.logHighlight {
+    background-color: var(--clr-highlight);
 }
 
 .index__work.WIP a {
@@ -271,12 +335,10 @@ main.blur {
     letter-spacing: -0.025em;
 }
 
-/* .index__work.WIP:hover a {
-    text-decoration: none;
-} */
 
 
-.index__work p {
+.index__work p,
+.index__otherwork p {
     display: inline;
     font-size: var(--size-m);
 
@@ -290,18 +352,20 @@ main.blur {
 }
 
 @media (max-width: 800px) {
-    .index__works {
+
+    .index__works,
+    .index__otherworks {
         padding-right: 0;
         padding-top: 0;
     }
+}
 
-    /* .index__work a {
-        font-size: var(--size-l);
-    }
+.index__classButton {
+    background: var(--clr-darkgrey);
+}
 
-    .index__work p {
-        font-size: var(--size-l);
-    } */
+.index__classButton.selected {
+    background: var(--clr-dark);
 }
 
 
@@ -354,7 +418,7 @@ main.blur {
     /* line-height: 1.2em; */
 }
 
-#about-text-secondPara{
+#about-text-secondPara {
     padding-left: 0.85rem;
 }
 
@@ -391,7 +455,7 @@ main.blur {
         margin-bottom: var(--size-xl);
     }
 
-    #about-text-secondPara{
-        padding-left:0;
+    #about-text-secondPara {
+        padding-left: 0;
     }
 }
