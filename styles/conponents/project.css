@@ -7,7 +7,17 @@
     flex-direction: column;
 }
 
+.U_PageOnPreview {
+    background-color: white;
+    padding: var(--size-m) var(--size-s);
+}
 
+@media (max-width: 800px) {
+    .U_PageOnPreview {
+        background-color: white;
+        padding: none;
+    }
+}
 
 
 
@@ -21,7 +31,7 @@ main {
 .single_page {
     width: 100%;
     height: 100vh;
-    /* background-color: blue; */
+    /* background-color:transparent; */
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
@@ -193,7 +203,8 @@ main {
 
 /* -------------- 2.basic -------------- */
 .content {
-    background: white;
+    /* background: white; */
+    background-color: transparent;
     padding-bottom: var(--size-xl);
     /* border: solid 2px rgb(0, 208, 255); */
     width: 100%;
@@ -505,7 +516,7 @@ main {
         flex-direction: column;
         width: 100%;
         gap: var(--size-2xl);
-        margin-bottom:var(--size-2xl);
+        margin-bottom: var(--size-2xl);
     }
 }
 
@@ -986,13 +997,14 @@ main {
 
 
 @media (max-width: 800px) {
+
     #BlackBox-3-booklet,
     #BlackBox-3-resident1,
     #BlackBox-3-resident2,
     #BlackBox-3-resident3,
     #BlackBox-3-outside3,
     #BlackBox-3-outside2,
-    #BlackBox-3-outside1{
+    #BlackBox-3-outside1 {
         margin: 0;
     }
 }
