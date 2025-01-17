@@ -2,6 +2,7 @@
     /* colors */
     --clr-dark: #05231a;
     --clr-darkgrey: rgb(135, 146, 143);
+    --clr-darkgrey-70: rgba(135, 146, 143, 0.7);
     --clr-grey: #cad2cf;
     --clr-light: #fff;
     --clr-highlight: #cad2cf;

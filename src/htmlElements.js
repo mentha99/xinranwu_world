@@ -4,7 +4,7 @@ class projectHeader extends HTMLElement {
         const projectTitle = this.getAttribute('title') || 'Default Project';
         const nextProject = this.getAttribute('next');
         this.innerHTML = `
-        <header class="header container">
+        <header class="header container U_blend_difference">
             <nav>
                 <ul class="header__menu">
                     <li>
@@ -19,7 +19,7 @@ class projectHeader extends HTMLElement {
                 </ul>
             </nav>
         </header>
-        <header class="subheader container">
+        <header class="subheader container U_blend_difference">
             <ul class="subheader__menu">
                 <li>
                     <a class="header__link" href="#top">↑${projectTitle}</a>
@@ -139,25 +139,25 @@ class projectsList extends HTMLElement {
 
                                 <div id="works-text2" class="works__container U_bgWhiteGradient short">
                                     <ul>
-                                        <li id="index-class-techlog" class="index__class">
-                                            <h2 class="index__classButton">💻Technical Process Archive</h2>
+                                        <li id="index-class-techlog" class="index__classother">
+                                            <h2 class="index__classTag">💻Technical Process Archive</h2>
                                         </li>
                                         <li id="IntoBirth-log" class="index__otherwork">
                                             <a href="../project/IntoBirth-log.html">Into Birth</a>
                                             <p>, 3DGS scanning, UE5 panorama environment, THREE.js web code</p>
                                         </li>
                                         <li id="FalseWindows-log" class="index__otherwork">
-                                            <a href="../project/FalseWindows.html">False Windows</a>
+                                            <a href="../project/FalseWindows-log.html">False Windows</a>
                                             <p>, photogrammetry 3D scanning, AI image to 3D model, video Mocap</p>
                                         </li>
                                     </ul>
                                     <ul>
-                                        <li id="index-class-techlog" class="index__class">
-                                            <h2 class="index__classButton">📄Research Writing</h2>
+                                        <li id="index-class-techlog" class="index__classother">
+                                            <h2 class="index__classTag">📄Research Writing</h2>
                                         </li>
-                                        <li id="IntoBirth-log" class="index__otherwork">
-                                            <a href="../project/IntoBirth-log.html">Into Birth</a>
-                                            <p>, 3DGS scanning, UE5 panorama environment, THREE.js web code</p>
+                                        <li id="TongfuBuilding" class="index__otherwork">
+                                            <a href="../resources/Tongfu_Building.pdf">Tongfu Building: a crescent of apartment standing on West Nanjing Road</a>
+                                            <p><br>historical architecture study in urban context, Shanghai, China, 2022</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -165,6 +165,11 @@ class projectsList extends HTMLElement {
 
                             <div class="thoughts__container">
                                 <div id="thought-text1" class="thoughts__text U_bgWhiteGradient">
+                                    <ul>
+                                        <li id="index-class-techlog" class="index__classother">
+                                            <h2 class="index__classTag">🔎research interest</h2>
+                                        </li>
+                                    </ul>
                                     <p class="">
                                         I create research-based <span id="word_1">art</span> and <span id="word_2">design</span>
                                         projects, driven by an obsession with
@@ -187,6 +192,11 @@ class projectsList extends HTMLElement {
                                     </p>
                                 </div>
                                 <div id="thought-text2" class="thoughts__text U_bgWhiteGradient">
+                                    <ul>
+                                        <li id="index-class-techlog" class="index__classother">
+                                            <h2 class="index__classTag">🧪technical experiment</h2>
+                                        </li>
+                                    </ul>
                                     <p class="">
                                         I experiment with technical pipelines bridging the physical and digital worlds to faithfully
                                         <span id="word_19">record</span>, immersively <span id="word_20">represent</span>, and

@@ -261,7 +261,8 @@ main.blur {
     margin-left: -0.4rem;
 }
 
-.index__class {
+.index__class,
+.index__classother {
     list-style: none;
     padding-bottom: var(--size-s);
 }
@@ -275,13 +276,12 @@ main.blur {
 }
 
 .index__otherwork:hover {
-    background-color: rgba(135, 146, 143, 0.75);
-    /* background-color: var(--clr-darkgrey); */
+    background-color: var(--clr-highlight);
 }
 
 
 .index__class h2,
-button {
+.index__classother h2 {
     display: inline-block;
 
     margin-top: var(--size-xs);
@@ -300,6 +300,10 @@ button {
     letter-spacing: 0;
 
     opacity: 0.75;
+}
+
+.index__classother h2 {
+    color: var(--clr-darkgrey);
 }
 
 .index__work:hover a,
@@ -323,7 +327,7 @@ button {
 }
 
 .index__otherworks li a:hover~li {
-    background-color: var(--clr-darkgrey);
+    background-color: var(--clr-highlight);
 }
 
 .index__work.logHighlight {
@@ -362,6 +366,11 @@ button {
 
 .index__classButton {
     background: var(--clr-darkgrey);
+}
+
+.index__classTag {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1.25px var(--clr-darkgrey-70) solid;
 }
 
 .index__classButton.selected {
