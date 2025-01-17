@@ -97,63 +97,13 @@ let isVisible = false; // State to track visibility
 
 linkLabInfo.addEventListener('click', () => {
     isVisible = !isVisible; // Toggle the state
-    // Handle elements on the right
     labInfoElementsRight.forEach(element => {
         element.style.opacity = isVisible ? '1' : '0'; // Set opacity
         element.style.transform = isVisible ? 'translateX(80%)' : 'translateX(0%)'; // Set transform
-        // element.style.transition = 'opacity 0.3s, transform 0.3s'; // Smooth transitions
     });
 
-    // Handle elements on the left
     labInfoElementsLeft.forEach(element => {
         element.style.opacity = isVisible ? '1' : '0'; // Set opacity
         element.style.transform = isVisible ? 'translateX(-80%)' : 'translateX(0%)'; // Set transform
-        // element.style.transition = 'opacity 0.3s, transform 0.3s'; // Smooth transitions
     });
 });
-// heroAllArea.addEventListener('scroll', () => {
-//     console.log('scrolling');
-//     // Example usage
-//     if (isHeroEmptyNearTop()) {
-//         console.log('hero__empty is less than 20vh from the top of the screen');
-//         linkHeroLab.style.display = 'none';
-//         linkLabIndex.style.display = 'block';
-//     } else {
-//         // If not at the bottom, ensure 'link-hero-lab' is shown
-//         linkHeroLab.style.display = 'block';
-//         linkLabIndex.style.display = 'none';
-//     }
-// });
-
-// heroScrollArea.addEventListener('scroll', () => {
-//     console.log('scrolling');
-//     // Example usage
-//     if (isHeroEmptyNearTop()) {
-//         console.log('hero__empty is less than 20vh from the top of the screen');
-//         linkHeroLab.style.display = 'none';
-//         linkLabIndex.style.display = 'block';
-//     } else {
-//         // If not at the bottom, ensure 'link-hero-lab' is shown
-//         linkHeroLab.style.display = 'block';
-//         linkLabIndex.style.display = 'none';
-//     }
-// });
-
-
-// // Add scroll listener for manual scroll
-// heroContainer.addEventListener('scroll', () => {
-//     const scrollTop = heroContainer.scrollTop; // How much has been scrolled
-//     const scrollHeight = heroContainer.scrollHeight; // Total scrollable height
-//     const clientHeight = heroContainer.clientHeight; // Visible height of the container
-
-//     // Check if scrolled to the bottom
-//     if (scrollTop + clientHeight >= scrollHeight - 10) {
-//         // Hide 'link-hero-lab' and show 'link-lab-index'
-//         linkHeroLab.style.display = 'none';
-//         linkLabIndex.style.display = 'inline';
-//     } else {
-//         // If not at the bottom, ensure 'link-hero-lab' is shown
-//         linkHeroLab.style.display = 'inline';
-//         linkLabIndex.style.display = 'none';
-//     }
-// });

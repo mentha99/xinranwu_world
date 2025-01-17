@@ -156,7 +156,7 @@ class projectsList extends HTMLElement {
                                             <h2 class="index__classTag">📄Research Writing</h2>
                                         </li>
                                         <li id="TongfuBuilding" class="index__otherwork">
-                                            <a href="../resources/Tongfu_Building.pdf">Tongfu Building: a crescent of apartment standing on West Nanjing Road</a>
+                                            <a href="../resources/Tongfu_Building.pdf" target="_blank">Tongfu Building: a crescent of apartment standing on West Nanjing Road</a>
                                             <p><br>historical architecture study in urban context, Shanghai, China, 2022</p>
                                         </li>
                                     </ul>
