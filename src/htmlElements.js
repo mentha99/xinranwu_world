@@ -140,7 +140,7 @@ class projectsList extends HTMLElement {
                                 <div id="works-text2" class="works__container U_bgWhiteGradient short">
                                     <ul>
                                         <li id="index-class-techlog" class="index__classother">
-                                            <h2 class="index__classTag">💻Technical Process Archive</h2>
+                                            <h2 class="index__classTag">💻technical process archive</h2>
                                         </li>
                                         <li id="IntoBirth-log" class="index__otherwork">
                                             <a href="../project/IntoBirth-log.html">Into Birth</a>
@@ -153,7 +153,7 @@ class projectsList extends HTMLElement {
                                     </ul>
                                     <ul>
                                         <li id="index-class-techlog" class="index__classother">
-                                            <h2 class="index__classTag">📄Research Writing</h2>
+                                            <h2 class="index__classTag">📄research writing</h2>
                                         </li>
                                         <li id="TongfuBuilding" class="index__otherwork">
                                             <a href="../resources/Tongfu_Building.pdf" target="_blank">Tongfu Building: a crescent of apartment standing on West Nanjing Road</a>

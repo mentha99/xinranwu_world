@@ -5,6 +5,7 @@ const titleBox = document.querySelector('.title');
 //first page of content
 const novelContent = document.getElementById('project-content');
 const novelPreview = document.getElementById('project-preview');
+const footerLog = document.getElementById('footer-log');
 
 container.addEventListener('scroll', () => {
     // console.log('Scrolling...');
@@ -17,11 +18,17 @@ container.addEventListener('scroll', () => {
     if (rect.top < viewportHeight && rect.bottom > 0) {
         header.classList.remove('scroll');
         subheader.classList.remove('appear');
+        if(footerLog){
+            footerLog.classList.remove('appear');
+        }
     }
     // Remove "visible" class when the element leaves the viewport
     else {
         header.classList.add('scroll');
         subheader.classList.add('appear');
+        if(footerLog){
+            footerLog.classList.add('appear');
+        }
     }
 
     const contentRect = novelContent.getBoundingClientRect();
@@ -30,6 +37,7 @@ container.addEventListener('scroll', () => {
     } else {
         novelPreview.classList.remove('blur'); // Remove blur effect
     }
+
 });
 
 //Scroll Control between single and multi pages
