@@ -88,11 +88,11 @@ class projectsList extends HTMLElement {
                                         </li>
                                         <li id="SitDown" class="index__work WIP">
                                             <a href="../project/SitDown.html">Sit Down, My Stranger (WIP)</a>
-                                            <p>, VR Experience and Performance, United States & China, 2024.9-</p>
+                                            <p>, VR Game and Performance, United States & China, 2024.9-</p>
                                         </li>
                                         <li id="IntoBirth" class="index__work">
                                             <a href="../project/IntoBirth.html">Into Birth</a>
-                                            <p>, Immersive Website, Beijing, China, United States, 2024.12</p>
+                                            <p>, Web-based Game, Beijing, China, United States, 2024.12</p>
                                         </li>
                                         <li id="PHS" class="index__work WIP">
                                             <a href="../project/PHS.html">PHS (WIP)</a>
@@ -111,8 +111,8 @@ class projectsList extends HTMLElement {
                                             <p>, Architectural Renovation, Fengwu Village, Anhui, China, 2023</p>
                                         </li>
                                         <li id="TrilogyOfTrees" class="index__work">
-                                            <a href="../project/TheVine.html">Trilogy of Trees</a>
-                                            <p>, Photography and Installation, Beijing, China & Europe, 2022-2023</p>
+                                            <a href="../project/TheVine.html">The Vine: a Trilogy about Trees</a>
+                                            <p>, Photography, Documentary and Installation, Europe & China, 2022-2023</p>
                                         </li>
                                         <li id="NovelOfTriviality" class="index__work">
                                             <a href="../project/NovelOfTriviality.html">Novel of Triviality</a>
