@@ -254,6 +254,11 @@ class projectsList extends HTMLElement {
                                     She is currently in her master study in Fiction and Entertainment at SCI-Arc, exploring the
                                     journey with new media art in Los Angeles.
                                 </p>
+                                <p>
+                                    <a href="mailto:wuxinran809@gmail.com">Contact: wuxinran809@gmail.com</a>
+                                     | <a href="https://www.instagram.com/_mentha99/" target="_blank">Instagram: @mentha99</a>
+                                     | <a href="../resources/CV_XinranWu_202501.pdf" target="_blank">More Info: view CV</a>
+                                </p>
                             </div>
                         </div>
                     </div>

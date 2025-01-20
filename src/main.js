@@ -108,7 +108,7 @@ function appearAboutAndList() {
         windowList.style.transform = "translate(-50%, 0)";
 
         windowAbout.style.opacity = "1";
-        // windowAbout.style.pointerEvents = "auto";
+        windowAbout.style.pointerEvents = "auto";
         windowList.style.opacity = "0";
         windowList.style.pointerEvents = "none";
         mainElement.classList.add('blur');
