@@ -82,8 +82,8 @@ h2 {
     max-width: 1536px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: var(--size-s);
-    padding-right: var(--size-s);
+    padding-left: var(--size-3xl);
+    padding-right: var(--size-3xl);
     /* border: solid 1px var(--clr-frame); */
 }
 
@@ -102,6 +102,8 @@ h2 {
 @media (max-width: 800px) {
     .container {
         max-width: 480px;
+        padding-left: var(--size-s);
+        padding-right: var(--size-s);
     }
 }
 

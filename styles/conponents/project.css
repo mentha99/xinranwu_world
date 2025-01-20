@@ -9,15 +9,21 @@
 
 .U_PageOnPreview {
     background-color: white;
-    padding: var(--size-m) var(--size-s);
+    padding: var(--size-l) var(--size-s) var(--size-2xl) var(--size-s);
+}
+
+.U_PageOnPreview.pageTitle{
+    padding-bottom: 0;
 }
 
 @media (max-width: 800px) {
     .U_PageOnPreview {
         background-color: white;
         padding: none;
+        padding: var(--size-m) var(--size-s) var(--size-2xl) var(--size-s);
     }
 }
+
 
 
 
@@ -205,10 +211,9 @@ main {
 .content {
     /* background: white; */
     background-color: transparent;
-    padding-bottom: var(--size-xl);
+    padding-bottom: var(--size-3xl);
     /* border: solid 2px rgb(0, 208, 255); */
     width: 100%;
-    padding-bottom: var(--size-m);
     /* display: flex; */
     /* flex-direction: column; */
 }
@@ -218,7 +223,7 @@ main {
     padding-top: var(--size-s);
     padding-bottom: var(--size-2xl);
     display: grid;
-    grid-gap: var(--size-m) var(--size-l);
+    grid-gap: var(--size-m) var(--size-m);
     grid-template-columns: repeat(3, 1fr);
     align-content: start;
     justify-content: start;
@@ -270,29 +275,62 @@ main {
 }
 
 .text_content {
+    padding: 0;
     grid-column: span 1;
+    font-size: var(--size-m);
+}
+
+.text_content.basic {
+    font-size: var(--size-l);
+    /* font-weight: 200; */
+    /* line-height: 1.35em; */
+    max-width: 50ch;
+}
+
+.text_content.question {
+    font-family: "Padyakke Expanded One", serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: var(--size-xl);
+    padding-left: var(--size-xl);
+    padding-right: var(--size-l);
+    padding-top: var(--size-m);
+
+    /* border: solid 0.15rem var(--clr-dark); */
+
+    /* background-color: var(--clr-dark); */
+    /* color: var(--clr-light); */
 }
 
 
 .text_content.note {
+    margin-top: var(--size-m);
     font-size: var(--size-sm);
+    font-weight: var(--font-ultralight);
 }
 
-.text_content a{
+.text_content a {
     /* text-decoration: none; */
-    color:var(--clr-pink);
+    color: var(--clr-pink);
 }
 
 /* M */
-@media (max-width: 800px) {    
+@media (max-width: 800px) {
 
     .basic__grid {
         padding-top: var(--size-xl);
         grid-template-columns: 1fr 1fr;
+
+        column-gap: var(--size-xs);
+        row-gap: var(--size-xs);
+
+        /* display: flex;
+        flex-direction: column;
+        width: 100%; */
     }
 
     .basic__images_grid {
-        grid-row: span 3;
+        grid-row: span 2;
     }
 
     .basic__texts_grid {
@@ -300,8 +338,17 @@ main {
     }
 
     .text_content {
-        grid-column: span 2;
+        grid-column: span 3;
         grid-row: span 1;
+    }
+
+    .text_content.basic {
+        font-size: var(--size-m);
+    }
+
+    .text_content.question {
+        padding-top: var(--size-2xl);
+        padding-bottom: var(--size-xl);
     }
 
     /* 
@@ -314,11 +361,11 @@ main {
 
 /* -------------- 3.show -------------- */
 .col__grid {
-    padding-top: var(--size-m);
+    /* padding-top: var(--size-m); */
     width: 100%;
     display: grid;
     grid-gap: var(--size-s) var(--size-l);
-    grid-template-columns: 0.75fr 0.75fr 1fr;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
     grid-template-rows: repeat(1, auto);
     align-content: start;
     justify-content: start;
@@ -332,7 +379,6 @@ main {
 @media (max-width: 800px) {
     .col__grid {
         grid-template-columns: repeat(2, 1fr);
-        padding-top: var(--size-xl);
     }
 
     .col__grid_video {
@@ -366,10 +412,35 @@ main {
     grid-column: 1/3;
 }
 
+
 .col__text {
+    height: 100%;
     grid-column: span 1;
     display: flex;
     flex-direction: column;
+}
+
+.col__text.withNote {
+    justify-content: space-between;
+}
+
+.col__text_title h1,
+.col__text h1 {
+    /* margin-bottom: var(--size-s); */
+    line-height: 1em;
+    font-size: var(--size-xl);
+
+    /* font-family: "Padyakke Expanded One", serif;
+    font-weight: 900;
+    font-size: var(--size-l); */
+}
+
+.col__text_title {
+    width: max-content;
+    /* max-width: 100%; */
+    border-bottom: solid 0.15rem var(--clr-dark);
+    padding-bottom: var(--size-xs);
+    margin-bottom:var(--size-sm); 
 }
 
 @media (max-width: 800px) {
@@ -379,6 +450,11 @@ main {
         grid-template-columns: subgrid;
         grid-template-columns: repeat(2, 1fr); */
     }
+
+    .col__text_title {
+        grid-column: 1/-1;
+        max-width: 32ch;
+    }
 }
 
 .page_title_box {
@@ -386,15 +462,17 @@ main {
     width: 100%;
     height: auto;
     border-bottom: solid 0.15rem var(--clr-dark);
+    margin-bottom: var(--size-m);
 }
 
 .page_title_text {
     font-size: var(--size-xl);
     text-decoration: none;
     /* font-weight: var(--font-regular); */
-    font-style: oblique;
+    font-style: none;
     color: var(--clr-dark);
-    letter-spacing: -0.05em;
+    letter-spacing: -0.025em;
+    padding-bottom: var(--size-xs);
 }
 
 /* -------------- 4.process -------------- */
@@ -408,8 +486,8 @@ main {
 .U_BG_dark {
     /* background-color: rgb(200, 200, 200);
     color: var(--clr-dark); */
-    color:var(--clr-vslight);
-    background-color:var(--clr-vsdark);
+    color: var(--clr-vslight);
+    background-color: var(--clr-vsdark);
 }
 
 
@@ -473,14 +551,14 @@ main {
 .process__text.note,
 .process__text.note h1,
 .process__text.note p {
-    color:var(--clr-vsblue);
+    color: var(--clr-vsblue);
 }
 
 .process__text h1 {
     /* font-family: "Press Start 2P", serif; */
     font-size: var(--size-l);
     margin-bottom: var(--size-s);
-    color:var(--clr-vscyan);
+    color: var(--clr-vscyan);
 }
 
 .process__text p {
@@ -511,7 +589,7 @@ main {
     .process__text h1 {
         font-size: var(--size-m);
     }
-    
+
     .process__text p {
         /* font-family: "Fira Code", serif; */
         font-size: var(--size-m);
