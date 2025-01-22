@@ -21,7 +21,7 @@ const textWorks2 = document.getElementById("works-text2");
 const textThoughts1 = document.getElementById("thought-text1");
 const textThoughts2 = document.getElementById("thought-text2");
 const textAbout = document.getElementById("about-text");
-const textAbout_height = textAbout.getBoundingClientRect().height - 18;
+const textAbout_height = textAbout.getBoundingClientRect().height - 16;
 // console.log(textAbout_height);
 
 // nav location #

@@ -224,7 +224,7 @@ main {
     padding-top: var(--size-s);
     padding-bottom: var(--size-2xl);
     display: grid;
-    grid-gap: var(--size-m) var(--size-m);
+    grid-gap: var(--size-m);
     grid-template-columns: repeat(3, 1fr);
     align-content: start;
     justify-content: start;
@@ -245,10 +245,23 @@ main {
     font-family: "Padyakke Expanded One", serif;
     font-weight: 900;
     font-style: normal;
-    font-size: var(--size-m);
+    font-size: var(--size-l);
     line-height: 1.15em;
     padding-top: 40%;
 }
+
+.basic__grid_question p {
+    padding: 0;
+    grid-column: span 1;
+    font-size: var(--size-l);
+    font-weight: var(--font-light);
+    line-height: 1.2em;
+
+
+    margin-right: var(--size-m);
+    max-width: 38ch;
+}
+
 
 @media (max-width: 800px) {
     .basic__grid_question {
@@ -650,6 +663,127 @@ main {
         grid-column: span 1;
     }
 }
+
+/* -------------- new content grid -------------- */
+
+.content__grid {
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-gap: var(--size-s) var(--size-s);
+    grid-template-columns: 1fr 1fr 0.35fr;
+    grid-template-rows: auto;
+
+    align-content: start;
+    justify-content: start;
+
+    color: var(--clr-dark);
+}
+
+.content__grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content__imageXL {
+    width: 100%;
+    height: fit-content;
+    grid-column: 1/-1;
+    grid-row: span 1;
+}
+
+.content__imageL {
+    width: 100%;
+    height: fit-content;
+    grid-column: 1/-2;
+    grid-row: span 1;
+    overflow: hidden;
+}
+
+.content__imageM {
+    grid-column: 1/-2;
+    grid-row: span 1;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+}
+
+.content__imageS {
+    grid-column: 1/-2;
+    grid-row: span 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: var(--size-s);
+}
+
+.content__imageXS {
+    width: 100%;
+    grid-column: 1/-2;
+    grid-row: span 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: var(--size-s);
+}
+
+.content__imageXS img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+.content__text {
+    grid-column: 1/-2;
+    grid-row: span 1;
+    margin-top: var(--size-l);
+}
+
+.content__text h2 {
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: "Padyakke Expanded One", serif;
+    /* margin: 0 0 var(--size-l) 0; */
+    padding-left: var(--size-2xl);
+    padding-top: var(--size-l);
+    font-size: var(--size-2xl);
+    /* background-color: black; */
+    /* color:var(--clr-light) */
+}
+
+.content__note {
+    grid-column: -2/-1;
+    position: relative;
+}
+
+.content__note p {
+    padding: 0;
+    font-size: var(--size-smm);
+    font-weight: var(--font-ultralight)
+}
+
+@media (max-width: 1024px) {
+    .content__note p {
+        font-size: var(--size-s);
+    }
+}
+
+.content__divide {
+    grid-column: 1/-2;
+    grid-row: span 1;
+    height: 7rem;
+}
+
+.content__divide h2 {
+    font-family: "Padyakke Expanded One", serif;
+    padding-top: 3rem;
+    font-size: var(--size-xl);
+
+    text-align: center;
+    /* padding-left: var(--size-2xl); */
+}
+
 
 
 /* -------------- for previous project -------------- */
