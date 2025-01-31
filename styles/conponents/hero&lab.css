@@ -161,11 +161,12 @@
 #hero-me-thought {
     position: relative;
     grid-area: thought;
+    text-align: center;
 }
 
 #hero-me-thought p {
     position: absolute;
-    font-size: 25.25px;
+    font-size: 16px;
     top: 50%;
     /* left: 50%; */
     transform: translate(0, -50%);
