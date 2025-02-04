@@ -228,8 +228,8 @@ class projectsList extends HTMLElement {
                         <div id="about-text" class="about_container U_bgWhiteGradient">
                             <div class="about_text">
                                 <p>
-                                    Xinran Wu is a research-based artist and creative technologist trying to blend the physical
-                                    present and fictional world-building into surreal narratives.
+                                    Xinran WU is a research-based new media artist exploring the potential boundaries between individual and collective memory through the lens of neural mechanisms and cultural landscapes.
+                                    Experimenting with technologies often perceived as isolating, she creates games, films, and interactive installations to foster new forms of intimacy across physical and virtual worlds.
                                 </p>
                                 <p>
                                     Her research explores the collective memory across the cultural landscape shaped by China's
@@ -237,7 +237,7 @@ class projectsList extends HTMLElement {
                                     mechanisms.
                                 </p>
                                 <p>
-                                    She experiments with technical pipelines between recording (3D scanning / documentary /
+                                    She technical experiments include recording (3D scanning / documentary /
                                     photography) and representation (game / animation / installation), creating immersive and
                                     interactive story-telling to critically reflect on memories.
                                 </p>
