@@ -7,12 +7,15 @@ const areaIntoBirth = document.getElementById('area-IntoBirthSVG');
 const infoIntoBirth = document.getElementById('info-IntoBirth');
 const areaFoldingBeijing = document.getElementById('area-FoldingBeijingSVG');
 const infoFoldingBeijing = document.getElementById('info-FoldingBeijing');
+const areaCoupleOfSingles = document.getElementById('area-CoupleOfSinglesSVG');
+const infoCoupleOfSingles = document.getElementById('info-CoupleOfSingles');
 const labHeader = document.getElementById('lab-header');
 
 infoAppear(areaNovel, infoNovel, "right");
 infoAppear(areaFalseWindow, infoFalseWindow, "left");
 infoAppear(areaIntoBirth, infoIntoBirth, "right");
 infoAppear(areaFoldingBeijing, infoFoldingBeijing, "left");
+infoAppear(areaCoupleOfSingles, infoCoupleOfSingles, "right");
 
 
 
